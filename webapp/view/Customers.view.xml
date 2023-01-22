@@ -1,0 +1,40 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="electricutilities.controller.Customers"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>customersTitle}" showNavButton="true" navButtonPress="onNavBack"
+	 backgroundDesign="Transparent"
+	  backgroundImage="resources/images/strommast.jpg"
+	backgroundOpacity="0.3"
+	>
+		<content>
+			<List id="customersList" mode="Delete" delete="handleDelete" headerText="{i18n>customersTitle}" items="{/}" itemPress="onPressCustomer">
+                <StandardListItem title="{id},{name},{surname},{birthdate}" type="Navigation"/>
+				<headerToolbar>
+				<OverflowToolbar>
+					<Title text="Customers" level="H2" />
+					<ToolbarSpacer />
+					
+					<Button
+					    text="{i18}CreateCustomer"
+						icon="sap-icon://add"
+						press="handleCreate" />
+					
+				</OverflowToolbar>
+			</headerToolbar>
+			<infoToolbar>
+				<OverflowToolbar
+					active="true"
+					press="handleInfobarPress" >
+					<Label text="This is the info bar" />
+				</OverflowToolbar>
+			</infoToolbar>
+
+	         </List>
+
+		</content>
+		<footer>
+			<Toolbar>
+				<Label text="{i18n>homeFooterText}"/>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

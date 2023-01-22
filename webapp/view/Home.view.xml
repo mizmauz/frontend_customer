@@ -1,0 +1,42 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="electricutilities.controller.Home"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>title}">
+		<content>
+		 <Button id="EnergyButton" text="{i18n>EnergyButton}" press="onEnergyButtonPress" class="sapUiTinyMarginEnd"/>
+
+			<GenericTile id="customersTile" binding="{/Patient}" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="My Customers" press="onEnergyTilePress">
+				<TileContent unit="Customers">
+					<NumericContent value="{%total%}" icon="sap-icon://stethoscope"/>
+				</TileContent>
+			</GenericTile>
+
+			<GenericTile id="meterTile" binding="{/Patient}" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="My Meters" press="onMeterPress">
+				<TileContent unit="Meter Installation">
+					<NumericContent value="{%total%}" icon="sap-icon://stethoscope"/>
+				</TileContent>
+			</GenericTile>
+
+			<GenericTile id="moveinTile" binding="{/Patient}" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="My Moveins" press="onMoveinPress">
+				<TileContent unit="Movein">
+					<NumericContent value="{%total%}" icon="sap-icon://stethoscope"/>
+				</TileContent>
+			</GenericTile>
+
+			<GenericTile id="billingTile" binding="{/Patient}" class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="My Billings" press="onBillingPress">
+				<TileContent unit="Billing">
+					<NumericContent value="{%total%}" icon="sap-icon://stethoscope"/>
+				</TileContent>
+			</GenericTile>
+
+		</content>
+		<footer>
+			<OverflowToolbar id="overflowToolbar">
+			 	<Button id="btn_messagePopover"
+                        icon="sap-icon://alert"
+                        text="{=${messageModel>/}.length}"
+                        press="onMessagePopoverPress" />
+            	<Label text="{i18n>homeFooterText}"/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

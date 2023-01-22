@@ -1,0 +1,38 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" controllerName="electricutilities.controller.CustomerCreate" xmlns:html="http://www.w3.org/1999/xhtml">
+    <Page title="{i18n>title}" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+            <f:SimpleForm id="customerFormCreate" valueLiveUpdate="true" binding="{/}"
+                editable="false"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="2"
+                columnsL="2"
+                columnsM="2"
+                visible="true">
+            <f:content>
+            <Label text="{i18n>LabelFirstName}" labelFor="customerFirstNameInput"/>
+            <Input id="customerFirstNameInput" value="{/name}"/>
+            <Label text="{i18n>LabelLastName}" labelFor="customerLastNameInput"/>
+            <Input id="customerLastNameInput" value="{/surname}" width="100px" class="sapUiTinyMarginEnd"/>
+            <Label text="{i18n>LabelBirthDate}" labelFor="customerBirthDateInput"/>
+            <Input id="customerBirthDateInput" value="{/birthdate}" />
+            </f:content>
+        </f:SimpleForm>
+        </content>
+        <footer>
+            <Toolbar>
+                <Label text="{i18n>homeFooterText}"/>
+                <ToolbarSpacer />
+                <Button id="cancelButton" text="{i18n>btnCustomerCancel}" visible="true" type="Reject" press="onCancel" />
+                <Button id="saveButton" text="{i18n>btnCustomerSave}" visible="true" type="Accept" press="onSave" />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

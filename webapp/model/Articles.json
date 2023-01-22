@@ -1,0 +1,23 @@
+{
+"articles": [{
+        "id": "AR00000111",
+        "description": "Pièce de rechange",
+        "debutValidite": "01.02.2020",
+        "finValidite": "01.05.2021",
+        "prix": "150"
+    }, {
+        "id": "AR00000112",
+        "description": "Chaise",
+        "debutValidite": "01.03.2020",
+        "finValidite": "01.05.2021",
+        "prix": "200"
+    }, {
+        "id": "AR00000113",
+        "description": "Pièce de rechange",
+        "debutValidite": "01.02.2020",
+        "finValidite": "01.09.2021",
+        "prix": "250"
+    }
+
+]
+}

@@ -1,0 +1,51 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+    <form:SimpleForm id="meterFormRead" binding="{/}"
+        editable="false"
+        layout="ResponsiveGridLayout"
+        labelSpanXL="3"
+        labelSpanL="3"
+        labelSpanM="3"
+        labelSpanS="12"
+        emptySpanXL="4"
+        emptySpanL="4"
+        emptySpanM="4"
+        emptySpanS="0"
+        columnsXL="2"
+        columnsL="2"
+        columnsM="2"
+        visible="{= !${appState>/editMode}}">
+        <form:content>
+            <Label text="{i18n>LabelMeterNumber}" labelFor="meterNumberText"/>
+            <Text id="meterNumberText" text="{/meternumber}" />
+            <Label text="{i18n>LabelLastName}" labelFor="customerLastNameText"/>
+            <Text id="customerLastNameText" text="{/surname}" />
+             <Label text="{i18n>LabelBirthdate}" labelFor="customerBirthDateText"/>
+            <Text id="customerBirthDateText" text="{/birthdate}" />
+        </form:content>
+    </form:SimpleForm>
+    <form:SimpleForm id="customerFormEdit" binding="{/}"
+        editable="true"
+        layout="ResponsiveGridLayout"
+        labelSpanXL="3"
+        labelSpanL="3"
+        labelSpanM="3"
+        labelSpanS="12"
+        emptySpanXL="4"
+        emptySpanL="4"
+        emptySpanM="4"
+        emptySpanS="0"
+        columnsXL="2"
+        columnsL="2"
+        columnsM="2"
+        visible="checkVariable">
+        <form:content>
+            <Label text="{i18n>LabelFirstName}" labelFor="customerFirstNameInput"/>
+            <Input id="customerFirstNameInput" value="{/name}"/>
+            <Label text="{i18n>LabelLastName}" labelFor="customerLastNameInput"/>
+            <Input id="customerLastNameInput" value="{/surname}" width="100px" class="sapUiTinyMarginEnd"/>
+            <Label text="{i18n>LabelBirthDate}" labelFor="customerBirthDateInput"/>
+            <Input id="customerBirthDateInput" value="{/birthdate}" />
+        </form:content>
+    </form:SimpleForm>
+    
+</mvc:View>

@@ -1,0 +1,8 @@
+<mvc:View displayBlock="true" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="electricutilities.controller.App" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Shell backgroundImage="resources/images/strommast.jpg"
+		 backgroundOpacity="0.3">
+	<App id="app" 
+		 backgroundImage="resources/images/strommast.jpg"
+		 backgroundOpacity="0.3"/>
+	</Shell>
+</mvc:View>
